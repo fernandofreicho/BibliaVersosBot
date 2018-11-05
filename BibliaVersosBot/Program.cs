@@ -15,7 +15,8 @@ namespace BibliaVersosBot
 
         static void Main()
         {
-            botClient = new TelegramBotClient("KEY_HERE");
+            //dev key
+            botClient = new TelegramBotClient("752423713:AAEFZ_l0L14yP5MRJQ3aAXdYVEgiSj7Bh5Q");
 
             var me = botClient.GetMeAsync().Result;
             Console.WriteLine(
