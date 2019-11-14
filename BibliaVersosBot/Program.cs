@@ -42,7 +42,7 @@ namespace BibliaVersosBot
 
                     Verse result = null;
                     bool aleatorio = false;
-                    using (var cnn = new SQLiteConnection("Data Source=" + Environment.CurrentDirectory + "\\db\\biblia.db"))
+                    using (var cnn = new SQLiteConnection("Data Source=" + Environment.CurrentDirectory + "/db/biblia.db"))
                     {
                         cnn.Open();
                         string sql = "SELECT * FROM Verses v INNER JOIN Books b on v.BookId = b.id  WHERE v.version = 'nvi' AND v.Text like @Texto ORDER BY RANDOM()";
